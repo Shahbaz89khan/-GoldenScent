@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		44AE155525F0B9B80015810D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AE155425F0B9B80015810D /* AppDelegate.swift */; };
-		44AE155725F0B9B80015810D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AE155625F0B9B80015810D /* SceneDelegate.swift */; };
 		44AE155925F0B9B80015810D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AE155825F0B9B80015810D /* ViewController.swift */; };
 		44AE155C25F0B9B80015810D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AE155A25F0B9B80015810D /* Main.storyboard */; };
 		44AE155E25F0B9BB0015810D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44AE155D25F0B9BB0015810D /* Assets.xcassets */; };
 		44AE156125F0B9BB0015810D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AE155F25F0B9BB0015810D /* LaunchScreen.storyboard */; };
+		44AE157325F0DAE00015810D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AE156E25F0DADF0015810D /* AppDelegate.swift */; };
+		44AE157425F0DAE00015810D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AE156F25F0DADF0015810D /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		44AE155125F0B9B80015810D /* Golden Scent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Golden Scent.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		44AE155425F0B9B80015810D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		44AE155625F0B9B80015810D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		44AE155825F0B9B80015810D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		44AE155B25F0B9B80015810D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44AE155D25F0B9BB0015810D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44AE156025F0B9BB0015810D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44AE156225F0B9BB0015810D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44AE156E25F0DADF0015810D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		44AE156F25F0DADF0015810D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +56,12 @@
 		44AE155325F0B9B80015810D /* Golden Scent */ = {
 			isa = PBXGroup;
 			children = (
-				44AE155425F0B9B80015810D /* AppDelegate.swift */,
-				44AE155625F0B9B80015810D /* SceneDelegate.swift */,
+				44AE157925F0DBE00015810D /* Models */,
+				44AE157A25F0DBE00015810D /* Repositories */,
+				44AE156D25F0DADF0015810D /* Application Setup */,
+				44AE157125F0DADF0015810D /* Common */,
+				44AE157025F0DADF0015810D /* Coordinator */,
+				44AE157225F0DAE00015810D /* Scenes */,
 				44AE155825F0B9B80015810D /* ViewController.swift */,
 				44AE155A25F0B9B80015810D /* Main.storyboard */,
 				44AE155D25F0B9BB0015810D /* Assets.xcassets */,
@@ -65,6 +69,50 @@
 				44AE156225F0B9BB0015810D /* Info.plist */,
 			);
 			path = "Golden Scent";
+			sourceTree = "<group>";
+		};
+		44AE156D25F0DADF0015810D /* Application Setup */ = {
+			isa = PBXGroup;
+			children = (
+				44AE156E25F0DADF0015810D /* AppDelegate.swift */,
+				44AE156F25F0DADF0015810D /* SceneDelegate.swift */,
+			);
+			path = "Application Setup";
+			sourceTree = "<group>";
+		};
+		44AE157025F0DADF0015810D /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		44AE157125F0DADF0015810D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		44AE157225F0DAE00015810D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		44AE157925F0DBE00015810D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		44AE157A25F0DBE00015810D /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +185,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44AE157325F0DAE00015810D /* AppDelegate.swift in Sources */,
 				44AE155925F0B9B80015810D /* ViewController.swift in Sources */,
-				44AE155525F0B9B80015810D /* AppDelegate.swift in Sources */,
-				44AE155725F0B9B80015810D /* SceneDelegate.swift in Sources */,
+				44AE157425F0DAE00015810D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +336,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Golden Scent/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,6 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Golden Scent/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
