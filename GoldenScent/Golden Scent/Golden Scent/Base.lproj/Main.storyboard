@@ -69,7 +69,7 @@
                                                                             <constraint firstAttribute="trailing" secondItem="eqd-xQ-6I2" secondAttribute="trailing" id="mFy-DT-kar"/>
                                                                         </constraints>
                                                                     </collectionViewCellContentView>
-                                                                    <color key="backgroundColor" red="0.71372549019999998" green="0.36078431370000003" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <connections>
                                                                         <outlet property="imageView" destination="cDH-Kp-gM6" id="w34-eX-cX9"/>
                                                                         <outlet property="textLabel" destination="6Zs-Gi-3LR" id="AZc-wT-LoU"/>

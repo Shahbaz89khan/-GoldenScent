@@ -8,14 +8,14 @@
 import UIKit
 
 class ProductsListViewController: UIViewController {
-
+    
     var viewModel: ProductsListViewModel
     var coordinator: MainCordinator?
-   @IBOutlet private weak var tableView : UITableView?
+    @IBOutlet private weak var tableView : UITableView?
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewModel()
-
+        
     }
     
     required init?(coder: NSCoder, andViewModel viewModel : ProductsListViewModel) {
@@ -43,10 +43,10 @@ class ProductsListViewController: UIViewController {
         }
         
         viewModel.fetchProducts()
-
+        
     }
     
-
+    
 }
 
 
@@ -74,7 +74,7 @@ extension ProductsListViewController: UITableViewDelegate, UITableViewDataSource
         cell.bottomConstraint.constant = viewModel.getBottomConstraintForCell(indexPath.section)
         cell.leadingConstraint.constant = viewModel.getLeadingConstraintForCell(indexPath.section)
         cell.trailinigConstraint.constant = viewModel.getTrailingConstraintForCell(indexPath.section)
-
+        
         return cell
     }
 }

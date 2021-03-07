@@ -16,7 +16,7 @@ class ProductsTableViewCell: UITableViewCell {
     @IBOutlet weak var leadingConstraint : NSLayoutConstraint!
     @IBOutlet weak var trailinigConstraint : NSLayoutConstraint!
     @IBOutlet weak var bottomConstraint : NSLayoutConstraint!
-
+    
     var itemsArray : [ProductItemListViewModel]! {
         didSet {
             
@@ -24,18 +24,18 @@ class ProductsTableViewCell: UITableViewCell {
         }
     }
     weak var delegate : ProductTableViewCellProtocol?
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
 }
 extension ProductsTableViewCell : UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     
@@ -53,7 +53,7 @@ extension ProductsTableViewCell : UICollectionViewDataSource,UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       
+        
         if let delegate = delegate {
             delegate.didClickOnItem()
         }
@@ -64,7 +64,6 @@ extension ProductsTableViewCell : UICollectionViewDataSource,UICollectionViewDel
         
         var width = self.collectionView.frame.size.width
         width = width / 2
-        print("sizeeee \(collectionView.frame)")
         return CGSize(width: width, height: self.collectionView.frame.size.height)
     }
     

@@ -15,7 +15,7 @@ class ProductItemListViewModel {
     var textAlignment: String?
     var textFontSize: Int?
     var fontColor: UIColor?
-
+    
     init(text: String?, imageURL: URL?, textFont: UIFont?, textBackground: UIColor?, textAlignment: String?, textFontSize: Int? , fontColor: UIColor? ) {
         self.text = text
         self.imageURL = imageURL

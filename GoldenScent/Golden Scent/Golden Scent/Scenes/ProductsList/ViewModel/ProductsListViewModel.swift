@@ -13,7 +13,7 @@ class ProductsListViewModel {
     var reloadTableView: (()->())?
     
     var showError : ((String) ->())?
-
+    
     var rows:  [Rows]?
     
     
@@ -28,15 +28,15 @@ class ProductsListViewModel {
             self.reloadTableView?()
         } else {
             self.showError?("Some Error occurred")
-
+            
         }
-       
+        
     }
     
     func getTotalSections() -> Int {
         return rows?.count ?? 0
     }
-   
+    
     func getHeightForRow(_ row : Int) -> CGFloat {
         let row = rows?[row]
         if let height =  row?.height {
@@ -47,7 +47,7 @@ class ProductsListViewModel {
     
     // To get margins for all cells
     func getBottomConstraintForCell(_ row : Int) -> CGFloat {
-    let row = rows?[row]
+        let row = rows?[row]
         var constant : CGFloat = 0.0
         if let margin = row?.rowMarginBottom {
             constant = CGFloat((margin as NSString).floatValue)
@@ -56,7 +56,7 @@ class ProductsListViewModel {
     }
     
     func getLeadingConstraintForCell(_ row : Int) -> CGFloat {
-    let row = rows?[row]
+        let row = rows?[row]
         var constant : CGFloat = 0.0
         if let margin = row?.rowMarginLeft {
             constant = CGFloat((margin as NSString).floatValue)
@@ -65,7 +65,7 @@ class ProductsListViewModel {
     }
     
     func getTrailingConstraintForCell(_ row : Int) -> CGFloat {
-    let row = rows?[row]
+        let row = rows?[row]
         var constant : CGFloat = 0.0
         if let margin = row?.rowMarginRight {
             constant = CGFloat((margin as NSString).floatValue)
@@ -81,14 +81,12 @@ class ProductsListViewModel {
             return itemsArray
         }
         let type = column.getColumnType()
-        print(type)
         
         switch type {
         case .slider:
             let sliders = column.slides
             for slide in sliders! {
                 let imageUrlString = slide.src?.removingWhitespaces() ?? ""
-                print(imageUrlString)
                 let item = ProductItemListViewModel(text: nil, imageURL: URL.init(string: imageUrlString), textFont: nil, textBackground: nil, textAlignment: nil, textFontSize: nil, fontColor: nil)
                 itemsArray.append(item)
             }
@@ -116,5 +114,5 @@ class ProductsListViewModel {
         return itemsArray
         
     }
-
+    
 }
