@@ -5,7 +5,7 @@
 //  Created by Shahbaz Khan on 04/03/2021.
 //
 
-struct Columns: Decodable {
+struct Columns: Codable {
     var type: String?
     var src : String?
     var content : String?
@@ -28,4 +28,27 @@ struct Columns: Decodable {
         case slides
     }
     
+    func getColumnType() -> ColumnType {
+        if self.type?.removingWhitespaces() == "image" {
+            return ColumnType.image
+        }
+        
+       else if self.type?.removingWhitespaces() == "text" {
+            return ColumnType.text
+        }
+       else if self.type?.removingWhitespaces() == "custom-slider" {
+        return ColumnType.slider
+       }
+        return ColumnType.unknown
+    }
+    
+    
+    
+}
+
+enum ColumnType {
+    case image
+    case text
+    case slider
+    case unknown
 }

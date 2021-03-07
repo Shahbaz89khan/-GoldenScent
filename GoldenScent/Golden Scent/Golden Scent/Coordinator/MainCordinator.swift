@@ -25,9 +25,5 @@ class MainCordinator: Coordinator {
         self.navigationController.pushViewController(viewController, animated: true)
         
     }
-    
-    func openProductDetail(){
-       
-    }
-    
+   
 }

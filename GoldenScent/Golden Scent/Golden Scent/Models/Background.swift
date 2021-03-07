@@ -5,7 +5,8 @@
 //  Created by Shahbaz Khan on 04/03/2021.
 //
 
-struct Background: Decodable {
+struct Background: Codable {
+    
     var color: String?
 
 }

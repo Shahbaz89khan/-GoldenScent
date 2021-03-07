@@ -8,9 +8,9 @@
 import UIKit
 
 protocol ProductsRepositoryProtocol {
-    func loadProducts<T: Decodable>() -> T?
+    func loadProducts<T: Decodable>() -> T!
 }
-struct ProductsRepository: ProductsRepositoryProtocol {
+class ProductsRepository: ProductsRepositoryProtocol {
 
     // Products file name from the resources
     private var fileName : String
@@ -20,7 +20,7 @@ struct ProductsRepository: ProductsRepositoryProtocol {
     }
     
     
-    func loadProducts<T: Decodable>() -> T? {
+    func loadProducts<T: Decodable>() -> T! {
         let data: Data
         guard let file = Bundle.main.url(forResource: self.fileName, withExtension: nil)
             else {

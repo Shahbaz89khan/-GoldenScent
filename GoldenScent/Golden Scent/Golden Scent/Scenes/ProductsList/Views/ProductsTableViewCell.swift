@@ -12,9 +12,17 @@ protocol ProductTableViewCellProtocol: class {
 }
 
 class ProductsTableViewCell: UITableViewCell {
-
-    var itemsArray : [ProductItemListViewModel] = [ProductItemListViewModel]()
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var leadingConstraint : NSLayoutConstraint!
+    @IBOutlet weak var trailinigConstraint : NSLayoutConstraint!
+    @IBOutlet weak var bottomConstraint : NSLayoutConstraint!
+
+    var itemsArray : [ProductItemListViewModel]! {
+        didSet {
+            
+            collectionView.reloadData()
+        }
+    }
     weak var delegate : ProductTableViewCellProtocol?
 
     override func awakeFromNib() {
@@ -55,7 +63,8 @@ extension ProductsTableViewCell : UICollectionViewDataSource,UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         var width = self.collectionView.frame.size.width
-        width = width / 3
+        width = width / 2
+        print("sizeeee \(collectionView.frame)")
         return CGSize(width: width, height: self.collectionView.frame.size.height)
     }
     

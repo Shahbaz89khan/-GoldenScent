@@ -5,7 +5,7 @@
 //  Created by Shahbaz Khan on 04/03/2021.
 //
 
-struct Rows: Decodable {
+struct Rows: Codable {
     var rowMarginBottom: String?
     var rowMarginLeft : String?
     var rowMarginRight : String?

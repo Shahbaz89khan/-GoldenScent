@@ -6,6 +6,13 @@
 //
 
 
-struct BaseResponse: Decodable {
+struct BaseResponse: Codable {
     var rows : [Rows]?
+    enum CodingKeys: String, CodingKey {
+        case rows
+    }
+    
+    init(rows : [Rows]) {
+        self.rows = rows 
+    }
 }
